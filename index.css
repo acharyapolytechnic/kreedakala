@@ -14,7 +14,7 @@ body {
   color: #002b7f;
   font-weight: bold;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-  font-size: 2rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 
@@ -104,4 +104,5 @@ footer {
   color: white;
   font-size: 0.9rem;
 }
+
 

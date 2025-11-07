@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #002b7f, #ff7f00); /* Blue to orange */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #ffffff;
+  color: #002b7f;
+  font-weight: bold;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 127, 0, 0.6);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.info {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.info span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff7f00; /* orange number */
+  display: block;
+}
+
+.info p {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* Desktop layout: 6 per row */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #002b7f;
+  color: white;
+  font-size: 0.9rem;
+}

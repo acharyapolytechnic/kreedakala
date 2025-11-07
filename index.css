@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  background: linear-gradient(135deg, #002b7f, #ff7f00); /* Blue to orange */
+  background: linear-gradient(135deg, #002b7f, #ff7f00);
   color: #fff;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
+/* ---------- HEADER ---------- */
 .header {
   text-align: center;
   padding: 2rem 1rem;
@@ -15,12 +16,13 @@ body {
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 }
 
+/* ---------- GALLERY ---------- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem 1rem;
+  justify-content: center;
 }
 
 .card {
@@ -29,6 +31,7 @@ body {
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #fff;
+  border-radius: 8px;
 }
 
 .card img {
@@ -60,24 +63,52 @@ body {
 .info span {
   font-size: 2rem;
   font-weight: 700;
-  color: #ff7f00; /* orange number */
+  color: #ff7f00;
   display: block;
 }
 
 .info p {
   margin: 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  font-size: 1.1rem;
   color: #ffffff;
+  letter-spacing: 1px;
 }
 
-/* Desktop layout: 6 per row */
-@media (min-width: 1024px) {
+/* ---------- MOBILE BOOST ---------- */
+@media (max-width: 600px) {
   .gallery {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .card {
+    transform: scale(1.15); /* make cards appear bigger */
+  }
+
+  .card:hover {
+    transform: scale(1.2);
+  }
+
+  .info span {
+    font-size: 2.3rem;
+  }
+
+  .info p {
+    font-size: 1.2rem;
   }
 }
 
+/* ---------- DESKTOP LAYOUT ---------- */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 3rem;
+  }
+}
+
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 1rem;

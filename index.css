@@ -9,7 +9,7 @@ body {
 /* Header */
 .header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   background: #ffffff;
   color: #002b7f;
   font-weight: bold;
@@ -104,3 +104,4 @@ footer {
   color: white;
   font-size: 0.9rem;
 }
+
